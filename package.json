@@ -1,0 +1,29 @@
+{
+  "name": "itunesnode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "nodemon server.js",
+    "lint": "jshint ."
+  },
+  "author": "kara",
+  "license": "ISC",
+  "dependencies": {
+    "config": "^1.30.0",
+    "express": "^4.16.3",
+    "express-validation": "^1.0.2",
+    "joi": "^13.2.0",
+    "jshint": "^2.9.5",
+    "npm": "^6.0.0",
+    "request": "^2.85.0"
+  },
+  "devDependencies": {
+    "mocha": "^5.1.1",
+    "nock": "^9.2.5",
+    "nodemon": "^1.17.3",
+    "sinon": "^4.5.0",
+    "supertest": "^3.0.0"
+  }
+}

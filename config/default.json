@@ -1,0 +1,9 @@
+{
+  "server": {
+    "port": 9000
+  },
+  "apple": {
+    "url": "http://localhost:9999/verifyReceipt",
+    "password": "pass"
+  }
+}
