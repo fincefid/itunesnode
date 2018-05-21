@@ -3,7 +3,7 @@
     "port": 9000
   },
   "apple": {
-    "url": "http://localhost:9999/verifyReceipt",
-    "password": "pass"
+    "url": "https://sandbox.itunes.apple.com/verifyReceipt",
+    "password": "47d903bb8a604f718e5a56ee82f71edf"
   }
 }

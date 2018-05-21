@@ -5,12 +5,8 @@ const sinon = require('sinon');
 const request = require('supertest');
 
 let validPayload = {
-	transactions: [
-		{
-			transaction: "123==",
-			transactionId: "1000000388825861"
-		}
-	]
+  transaction: "123==",
+  transactionId: "1000000388825861"
 };
 let validRequest;
 
@@ -22,7 +18,7 @@ describe('Server', function() {
         .post('/verifyReceipt')
         .set('X-SkyInt-RequestID', '123')
         .set('Content-Type', 'application/json')
-        .send(validPayload)
+        .send(validPayload);
   });
 
   afterEach(function() {
@@ -34,8 +30,8 @@ describe('Server', function() {
     validRequest
       .expect(200)
       .end(function(err, res) {
-        assert.deepEqual(res.body, {result: ""})
-        done(err)
+        assert.deepEqual(res.body, {result: ""});
+        done(err);
       });
   });
 
@@ -46,7 +42,7 @@ describe('Server', function() {
       .send(validPayload)
       .expect(400)
       .end(function(err, res) {
-        done(err)
+        done(err);
       });
   });
 
@@ -55,7 +51,7 @@ describe('Server', function() {
     validRequest
       .expect(500)
       .end(function(err, res) {
-        done(err)
+        done(err);
       });
   });
 
@@ -64,7 +60,7 @@ describe('Server', function() {
     validRequest
       .expect(404)
       .end(function(err, res) {
-        done(err)
+        done(err);
       });
   });
 
@@ -73,7 +69,7 @@ describe('Server', function() {
     validRequest
       .expect(502)
       .end(function(err, res) {
-        done(err)
+        done(err);
       });
   });
 
@@ -82,7 +78,7 @@ describe('Server', function() {
     validRequest
       .expect(422)
       .end(function(err, res) {
-        done(err)
+        done(err);
       });
   });
 
@@ -91,7 +87,7 @@ describe('Server', function() {
     validRequest
       .expect(503)
       .end(function(err, res) {
-        done(err)
+        done(err);
       });
   });
 
@@ -100,7 +96,7 @@ describe('Server', function() {
     validRequest
       .expect(503)
       .end(function(err, res) {
-        done(err)
+        done(err);
       });
   });
 });

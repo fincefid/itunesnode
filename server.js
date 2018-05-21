@@ -8,7 +8,7 @@ const service = require('./service');
 app.use(require('body-parser').json());
 
 app.post('/verifyReceipt', validate(validation), function(req, res) {
-  service.verify(req.body.transactions[0], function(err, result) {
+  service.verify(req.body, function(err, result) {
     if (err) {
       if (err.code === "UnsuccessfulAppleResponse") res.statusCode = 500;
       else if (err.code === "TransactionNotFound") res.statusCode = 404;
